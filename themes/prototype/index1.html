@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>原型地址链接</title>
+        <!-- 设置网址图标 -->
+        <link rel="shortcut icon" href="/thinkerlxw/favicon.ico" />
+    </head>
+    <style type="text/css">
+ h1 {
+    margin-left: 10px;
+    color:red;
+    letter-spacing: 5px;
+    font-size: 30px;
+ }
+ li{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+ }
+ #pagination a{
+		width: 50px;
+		height:20px;
+		margin-left: 10px;
+        cursor: pointer;
+        color: white;
+	}
+.prototype{
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-decoration:none;
+}
+
+</style>
+    <body background="/thinkerlxw/images/cover3.jpg"
+        style="background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-attachment:fixed;">
+        <h1>项目原型集锦</h1>
+        <center style="padding-top: 30px;">
+            <div>
+                <table cellspacing="0" cellpadding="0"
+                    style="height:400px;text-align: center;">
+                    <tbody id="pageInfo">
+                        <tr><td><a class="prototype" onclick="gotoHref()">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td><a class="prototype">团支部管理系统</a></td></tr>
+                        <tr><td>开发部</td></tr>
+                    </tbody>
+                </table>
+                <div id="pagination"
+                    style="position:absolute;right:10px;bottom:10px;height:
+                    35px;">
+                    <a id="firPage" style="margin-left: 0px;width: 35px;"
+                        style="color: rgb(221, 221, 221); cursor: not-allowed;">首页</a>
+                    <a id="prePage">上一页</a>
+                    <a id="nexPage">下一页</a>
+                    <a id="lasPage" style="width: 35px;">尾页</a>
+                    <input id="numPage" style="width: 30px;margin-left:
+                        10px;height: 16px;text-align: center;" />
+                    <a id="pageNumber" style="width: 35px;">跳转</a>
+                </div>
+            </div>
+        </center>
+      
+        <script src="/thinkerlxw/js/jquery-2.0.3.min.js"></script>
+
+        <script type="text/javascript">
+        // 获取table内容
+        var departmentInfo = document.getElementById("pageInfo"); 
+        // 计算总条数
+        var totalRow = departmentInfo.rows.length;
+        // 设置每页个数
+        var pagesize = 10; 
+        // 计算总页数
+        var totalPage = Math.ceil(totalRow/pagesize); 
+        // 当前页面
+        var currentPage;
+        // 起始行
+        var startRow;
+        // 最后一行
+        var lastRow;
+        function pagination(i){
+            // 当前页
+            currentPage = i;
+            // 显示页码
+            document.getElementById("numPage").value=currentPage;
+            // 每页显示第一条数据的行数
+            startRow = (currentPage-1)*pagesize;
+            // 每页显示的最后一条数据的行数
+            lastRow = currentPage*pagesize;
+            if(lastRow>totalRow){
+                // 如果最后一页的最后一条数据显示的行数大于总条数，那么就让最后一条的行数等于总条数
+                lastRow = totalRow;
+            }
+            //将数据遍历出来
+            for(var i = 0; i < totalRow; i++){ 
+                var hrow = departmentInfo.rows[i];
+                if(i >= startRow && i < lastRow){
+                    hrow.style.display="table-row";
+                }else{
+                    hrow.style.display="none";
+                }
+            }
+        }
+
+        $(function(){
+            // 先加载第一页
+            pagination(1);
+        });
+    
+        $("#firPage").click(
+            function firstPage() {
+                pagination(1);
+            }
+        )
+
+        // 上一页
+        $("#prePage").click(
+            function prevPage(){
+                var i= currentPage-1;
+                if(i<1){
+                    i=currentPage;
+                }
+                pagination(i);
+            })
+
+        // 页面跳转
+         $("#pageNumber").click(
+            function numPage(){
+                var i = document.getElementById("numPage").value;
+                if(i<1){
+                    i = currentPage;
+                }
+                if (i > totalPage) {
+                     i = currentPage;
+                 }
+                document.getElementById("numPage").value = currentPage;
+                pagination(i);
+            })
+
+        // 下一页
+        $("#nexPage").click(  
+             function pnextPage(){
+                var i= currentPage+1;
+                if(i>totalPage){
+                    i= currentPage;
+                }
+                pagination(i);
+        })
+
+        // 尾页
+        $("#lasPage").click(
+        function lastPage(){
+            var i = totalPage;
+            pagination(i);
+        })
+        
+        // 弹出框
+        function gotoHref() {
+            var passwordEX= prompt("请输入密码");
+            if(passwordEX == "thinkerLxw"){
+                window.open("./league/index.html");
+            }
+        }
+        
+    </script>
+    </html>
