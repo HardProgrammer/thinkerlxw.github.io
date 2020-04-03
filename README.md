@@ -8,7 +8,10 @@ cnpm install hexo-generator-searchdb --save
 ### 2. hexo-generate-feed 用于生成RSS订阅
 cnpm install hexo-generator-feed --save
 
-### 3. 相关插件(可选)
+### 3. 字数统计
+cnpm i --save hexo-wordcount
+
+### 4. 相关插件(可选)
 hexo-generator-index-pin-top 用于文章置顶
 
 hexo-blog-encrypt 用于文章加密

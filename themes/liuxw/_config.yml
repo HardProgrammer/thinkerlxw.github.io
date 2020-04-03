@@ -105,7 +105,7 @@ layout:
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:  
-  enable: true
+  enable: false
   app_id: #
   app_key: #
 # Valine配置
@@ -170,5 +170,5 @@ pageFooter: true
 #ICP备案信息尾部显示
 icp:
   enable: false
-  url: 'http://www.beian.miit.gov.cn/' # 备案链接
-  text: '浙ICP备88888888' # 备案信息
+  url: '' # 备案链接
+  text: '' # 备案信息
