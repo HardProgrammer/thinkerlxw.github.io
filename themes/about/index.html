@@ -16,23 +16,22 @@
     about | thinker
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
-
   <link rel="shortcut icon" href="/thinkerlxw/favicon.ico" />
-
-
   <link rel="stylesheet" href="/thinkerlxw/dist/main.css">
-
-
   <link rel="stylesheet" href="/thinkerlxw/css/custom.css">
-
-
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-
-
-
-
-
   <link rel="alternate" href="/thinkerlxw/atom.xml" title="thinker" type="application/atom+xml">
+  <style>
+    .round_icon {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+  </style>
 </head>
 
 </html>
@@ -50,25 +49,33 @@
               <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
                 thinkerlxw
               </h1>
-
-
             </header>
+            <center><img src="/thinkerlxw/images/cover2.jpg" class="round_icon" alt="thinkerlxw">
+            </center>
 
             <div class="article-entry" itemprop="articleBody">
+              <div style="margin-top: 20px;">
+                <strong>码龄:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="years"></span>
+                </br>
+                <strong>院校:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;闽江学院
+                </br>
+                <strong>QQ:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1229703575
+                </br>
+                <strong>CSDN:</strong> &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://blog.csdn.net/lxw983520"
+                  target="_blank">https://blog.csdn.net/lxw983520</a>
+                </br>
+                <strong>GitHub:</strong> &nbsp;&nbsp;&nbsp;<a href="https://github.com/HardProgrammer"
+                  target="_blank">https://github.com/HardProgrammer</a>
+                </br>
+                <strong>简介:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个迷茫的程序员，主修java，爱好七七八八的各种IT技术。
+                </br>
+                <strong>座右铭:</strong> &nbsp;&nbsp; 11
+                </br>
+              </div>
 
             </div>
 
-
           </div>
-
-
-
-
-
-
-
-
-
 
         </article>
       </section>
@@ -257,6 +264,13 @@
     <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
 
     <script>
+      let dateNow = new Date();
+      let year = dateNow.getFullYear();
+
+
+      document.getElementById("years").innerHTML = (year - 2017) + " 年";
+
+
       function viewer_init() {
         let pswpElement = document.querySelectorAll('.pswp')[0];
         let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
