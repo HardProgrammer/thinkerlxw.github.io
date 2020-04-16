@@ -1,0 +1,97 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    /*兼容移动端主流浏览器*/
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    /*清除移动端点击高亮效果*/
+}
+
+body {
+    font-family: Microsoft YaHei, sans-serif;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+/*清除浮动*/
+
+.swipe::before,
+.swipe::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.layout {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    /* 绝对定位*/
+    position: absolute;
+    overflow: hidden;
+    position: relative;
+}
+
+.swipe {
+    width: 1000%;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+}
+
+.swipe li {
+    width: 10%;
+    float: left;
+}
+
+.swipe li a {
+    display: block;
+    width: 100%;
+}
+
+.swipe li a img {
+    width: 100%;
+    display: block;
+}
+
+.swipe-btn-list {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* 下方按钮 */
+
+.swipe-btn-list li {
+    width: 10px;
+    height: 10px;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.swipe-btn-list li:first-child {
+    margin-left: 0;
+}
+
+.swipe-btn-list li.now {
+    background: red;
+}
