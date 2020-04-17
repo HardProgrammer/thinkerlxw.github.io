@@ -15,83 +15,200 @@ body {
     color: #333;
 }
 
-ol,
-ul {
-    list-style: none;
-}
-
-
-/*清除浮动*/
-
-.swipe::before,
-.swipe::after {
-    content: "";
-    display: block;
-    height: 0;
-    line-height: 0;
-    visibility: hidden;
-    clear: both;
-}
-
-.layout {
+.top-head {
+    background: url("/thinkerlxw/images/cover1.jpg") no-repeat;
+    position: fixed;
+    background-size: 100% 100%;
     width: 100%;
-    margin: 0 auto;
-    position: relative;
+    height: 200px;
 }
 
-.banner {
-    width: 100%;
-    height: 300px;
-    /* 绝对定位*/
+.top-head img {
     position: absolute;
-    overflow: hidden;
-    position: relative;
 }
 
-.swipe {
-    width: 1000%;
-    -webkit-transform: translateX(-10%);
-    transform: translateX(-10%);
-}
-
-.swipe li {
-    width: 10%;
-    float: left;
-}
-
-.swipe li a {
-    display: block;
-    width: 100%;
-}
-
-.swipe li a img {
-    width: 100%;
-    display: block;
-}
-
-.swipe-btn-list {
+.introduction h2 {
+    height: 0 auto;
     position: absolute;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-}
-
-
-/* 下方按钮 */
-
-.swipe-btn-list li {
-    width: 10px;
-    height: 10px;
-    background-color: lightblue;
-    border-radius: 50%;
+    left: 10%;
+    bottom: 30%;
     display: inline-block;
-    margin-left: 10px;
+    background: linear-gradient(left, #f71605, #e0f513);
+    background: -webkit-linear-gradient(left, #f71605, #e0f513);
+    background: -o-linear-gradient(right, #f71605, #e0f513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scratchy 0.753s linear forwards infinite;
+    /* 其它浏览器兼容性前缀 */
+    -webkit-animation: scratchy 0.753s linear forwards infinite;
+    -moz-animation: scratchy 0.753s linear forwards infinite;
+    -ms-animation: scratchy 0.753s linear forwards infinite;
+    -o-animation: scratchy 0.753s linear forwards infinite;
 }
 
-.swipe-btn-list li:first-child {
-    margin-left: 0;
+@keyframes scratchy {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 0;
+    }
+    26% {
+        background-position: 20px -20px;
+    }
+    50% {
+        background-position: 20px -20px;
+    }
+    51% {
+        background-position: 40px -40px;
+    }
+    75% {
+        background-position: 40px -40px;
+    }
+    76% {
+        background-position: 60px -60px;
+    }
+    99% {
+        background-position: 60px -60px;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
-.swipe-btn-list li.now {
-    background: red;
+
+/* 添加兼容性前缀 */
+
+@-webkit-keyframes scratchy {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 0;
+    }
+    26% {
+        background-position: 20px -20px;
+    }
+    50% {
+        background-position: 20px -20px;
+    }
+    51% {
+        background-position: 40px -40px;
+    }
+    75% {
+        background-position: 40px -40px;
+    }
+    76% {
+        background-position: 60px -60px;
+    }
+    99% {
+        background-position: 60px -60px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-moz-keyframes scratchy {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 0;
+    }
+    26% {
+        background-position: 20px -20px;
+    }
+    50% {
+        background-position: 20px -20px;
+    }
+    51% {
+        background-position: 40px -40px;
+    }
+    75% {
+        background-position: 40px -40px;
+    }
+    76% {
+        background-position: 60px -60px;
+    }
+    99% {
+        background-position: 60px -60px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-ms-keyframes scratchy {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 0;
+    }
+    26% {
+        background-position: 20px -20px;
+    }
+    50% {
+        background-position: 20px -20px;
+    }
+    51% {
+        background-position: 40px -40px;
+    }
+    75% {
+        background-position: 40px -40px;
+    }
+    76% {
+        background-position: 60px -60px;
+    }
+    99% {
+        background-position: 60px -60px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-o-keyframes scratchy {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 0;
+    }
+    26% {
+        background-position: 20px -20px;
+    }
+    50% {
+        background-position: 20px -20px;
+    }
+    51% {
+        background-position: 40px -40px;
+    }
+    75% {
+        background-position: 40px -40px;
+    }
+    76% {
+        background-position: 60px -60px;
+    }
+    99% {
+        background-position: 60px -60px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.introduction h4 {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    left: 5%;
+    color: blue;
+}
+
+.introduction span {
+    position: absolute;
+    left: 20%;
+    color: blue;
 }
