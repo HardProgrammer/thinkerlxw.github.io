@@ -8,41 +8,152 @@
     <link rel="stylesheet" href="/thinkerlxw/css/thinker.css">
     <link rel="shortcut icon" href="/thinkerlxw/favicon.ico" />
     <script src="/thinkerlxw/js/jquery-2.0.3.min.js"></script>
-    <style type="text/css">
-        body {
-            background-color: rgb(37, 40, 189);
-        }
-        
-        .snow-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 100001;
-            background-size: 100% 100%;
-        }
-    </style>
 </head>
 
 <body>
+    <!-- 全局背景 -->
+    <div class="snow-container">
+
+    </div>
     <!-- 头部 -->
     <div class="top-head">
         <div class="introduction">
             <a href="/thinkerlxw/">
                 <h2 class="head-index">博思thinker</h2>
             </a>
-            <h4>幸福因与人分享而更加完美。<br><span>——简·博特</span></h4>
+            <h4>幸福因与人分享而更加完美。</h4>
+        </div>
+        <div class="navdiv">
+            <nav class="nav">
+                <a href="#" class="nav-item is-active" active-color="orange">网站首页</a>
+                <a href="#" class="nav-item" active-color="green">技术文章</a>
+                <a href="#" class="nav-item" active-color="blue">作品欣赏</a>
+                <a href="#" class="nav-item" active-color="red">产品中心</a>
+                <a href="#" class="nav-item" active-color="rebeccapurple">联系我们</a>
+                <span class="nav-indicator"></span>
+            </nav>
         </div>
     </div>
-
-    <div class="snow-container">
-
+    <!-- 右侧 -->
+    <div class="person-right">
+        <div class="head-image">
+            <img src="/thinkerlxw/images/alipay.jpg" alt="博思thinker">
+        </div>
+        <div>
+            <h2>分类</h2>
+            <ul>
+                <li><a href="#">操作系统</a></li>
+                <li><a href="#">网络</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Springboot</a></li>
+                <li><a href="#">Springcloud</a></li>
+                <li><a href="#">数据库</a></li>
+                <li><a href="#">linux</a></li>
+                <li><a href="#">杂谈</a></li>
+            </ul>
+        </div>
     </div>
+    <div class="content">
+        <div class="index">
+            <ul>
+                <li><a href="#">操作系统</a></li>
+                <li><a href="#">网络</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Springboot</a></li>
+                <li><a href="#">Springcloud</a></li>
+                <li><a href="#">数据库</a></li>
+                <li><a href="#">linux</a></li>
+                <li><a href="#">杂谈</a></li>
+            </ul>
+        </div>
 
+        <div class="articles">
+            <div>22</div>
+
+        </div>
+        <div class="works">
+            <div>33</div>
+
+        </div>
+        <div class="product">
+            <div>44</div>
+
+        </div>
+        <div class="about">
+            <div>55</div>
+
+        </div>
+    </div>
     <script src="/thinkerlxw/js/snowy.js"></script>
 
 </body>
+<script>
+    const indicator = document.querySelector('.nav-indicator');
+    const items = document.querySelectorAll('.nav-item');
+    $(".about").hide();
+    $(".product").hide();
+    $(".works").hide();
+    $(".articles").hide();
+
+    function handleIndicator(el) {
+        items.forEach(item => {
+            item.classList.remove('is-active');
+            item.removeAttribute('style');
+        });
+
+        indicator.style.width = `${el.offsetWidth}px`;
+        indicator.style.left = `${el.offsetLeft}px`;
+        indicator.style.backgroundColor = el.getAttribute('active-color');
+
+        el.classList.add('is-active');
+        el.style.color = el.getAttribute('active-color');
+    }
+
+    items.forEach((item, index) => {
+        item.addEventListener('click', e => {
+            handleIndicator(e.target);
+            switch (index) {
+                case 0:
+                    $(".index").show();
+                    $(".about").hide();
+                    $(".product").hide();
+                    $(".works").hide();
+                    $(".articles").hide();
+                    break;
+                case 1:
+                    $(".index").hide();
+                    $(".about").hide();
+                    $(".product").hide();
+                    $(".works").hide();
+                    $(".articles").show();
+                    break;
+                case 2:
+                    $(".index").hide();
+                    $(".about").hide();
+                    $(".product").hide();
+                    $(".works").show();
+                    $(".articles").hide();
+                    break;
+                case 3:
+                    $(".index").hide();
+                    $(".about").hide();
+                    $(".product").show();
+                    $(".works").hide();
+                    $(".articles").hide();
+                    break;
+                case 4:
+                    $(".index").hide();
+                    $(".about").show();
+                    $(".product").hide();
+                    $(".works").hide();
+                    $(".articles").hide();
+                    break;
+            }
+        });
+        item.classList.contains('is-active') && handleIndicator(item);
+    });
+</script>
 
 </html>
