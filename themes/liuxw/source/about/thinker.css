@@ -72,7 +72,7 @@
     }
     
     .nav-item {
-        color: #83818c;
+        color: white;
         padding: 10px;
         text-decoration: none;
         transition: .3s;
@@ -141,49 +141,36 @@
     }
     
     .head-image img {
+        display: block;
         position: cover;
-        width: 100px;
-        height: 100px;
+        max-width: 100%;
         border-radius: 50%;
     }
     
-    .catagroy-title {
-        text-align: center;
-        height: 30px;
-        width: 100%;
+    .back-to {
+        bottom: 55px;
+        overflow: hidden;
+        position: fixed;
+        right: 10px;
+        width: 110px;
+        z-index: 999;
     }
     
-    .catagroy-title a {
-        font-family: sans-serif;
-        text-decoration: none;
+    .back-to .back-top {
+        background: url("/thinkerlxw/images/ayer.png") no-repeat scroll 0 0 transparent;
+        display: block;
+        float: right;
+        height: 50px;
+        margin-left: 10px;
+        outline: 0 none;
+        text-indent: -9999em;
+        width: 50px;
     }
     
-    .person-right p {
-        font-family: cursive;
-        text-align: center;
-        font-size: 20px;
-        margin-top: 20px;
+    .back-to .back-top:hover {
+        background-position: -50px 0
     }
     
-    .person-right ul {
-        max-width: 100%;
-        display: inline;
-    }
-    
-    .person-right li {
-        margin-top: 5px;
-        list-style: none;
-        display: inline-block;
-    }
-    
-    .person-right li div {
-        margin-top: 10px;
-        width: 100px;
-        height: 30px;
-    }
-    
-    .person-right li a {
-        font-family: sans-serif;
-        font-size: 15px;
-        text-decoration: none;
+    .index {
+        height: 100px;
     }

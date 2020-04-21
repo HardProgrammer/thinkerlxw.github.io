@@ -18,7 +18,7 @@
     <!-- 头部 -->
     <div class="top-head">
         <div class="introduction">
-            <a href="/thinkerlxw/" title="点击进入博客系统">
+            <a href="/thinkerlxw/" title="点击进入博思thinker">
                 <h2 class="head-index">博思thinker</h2>
             </a>
             <br>
@@ -41,72 +41,61 @@
             <img src="/thinkerlxw/images/background.jpg" alt="博思thinker">
         </div>
         <div class="catagroy">
-            <div class="catagroy-title">
-                <a href="#">
-                    <p>分类</p>
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <div><a href="#">网络</a></div>
-                </li>
-                <li>
-                    <div><a href="#">HTML/CSS</a></div>
-                </li>
-                <li>
-                    <div><a href="#">数据库</a></div>
-                </li>
-                <li>
-                    <div><a href="#">操作系统</a></div>
-                </li>
-                <li>
-                    <div><a href="#">Springboot</a></div>
-                </li>
-                <li>
-                    <div><a href="#">Springcloud</a></div>
-                </li>
-                <li>
-                    <div><a href="#">杂谈</a></div>
-                </li>
-            </ul>
+
         </div>
     </div>
     <div class="content">
         <div class="index">
-            <ul>
-                <li><a href="#">网络</a></li>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">数据库</a></li>
+            11
 
-                <li><a href="#">Springboot</a></li>
-                <li><a href="#">Springcloud</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">操作系统</a></li>
-                <li><a href="#">linux</a></li>
-                <li><a href="#">杂谈</a></li>
-            </ul>
+        </div>
+        <div class="index">
+            11
+
+        </div>
+        <div class="index">
+            11
+
+        </div>
+        <div class="index">
+            11
+
+        </div>
+        <div class="index">
+            11
+
+        </div>
+        <div class="index">
+            11
+
+        </div>
+        <div class="index">
+            11
+
+        </div>
+        <div class="index">
+            11
+
         </div>
 
         <div class="articles">
-            <div>22</div>
+
 
         </div>
         <div class="works">
-            <div>33</div>
+
 
         </div>
         <div class="product">
-            <div>44</div>
 
         </div>
         <div class="about">
-            <div>55</div>
+
 
         </div>
+    </div>
+    <div style="display:none;" class="back-to" id="toolBackTop">
+        <a title="返回顶部" onclick="window.scrollTo(0,0);return false;" href="#top" class="back-top"></a>
     </div>
     <script src="/thinkerlxw/js/snowy.js"></script>
 
@@ -175,6 +164,24 @@
             }
         });
         item.classList.contains('is-active') && handleIndicator(item);
+    });
+
+    var bt = $('#toolBackTop');
+    var sw = $(document.body)[0].clientWidth;
+
+    var limitsw = (sw - 840) / 2 - 80; //距离右侧距离
+    if (limitsw > 0) {
+        limitsw = parseInt(limitsw);
+        bt.css("right", limitsw / 8);
+    }
+
+    $(window).scroll(function() {
+        var st = $(window).scrollTop();
+        if (st > 30) {
+            bt.show();
+        } else {
+            bt.hide();
+        }
     });
 </script>
 
