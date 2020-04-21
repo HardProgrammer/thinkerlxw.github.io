@@ -81,7 +81,7 @@ live2d:
     # use: ./wives/wanko # 相对于博客根目录的路径
     # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
   display:
-    position: left
+    position: right
     width: 150
     height: 300
 
@@ -89,8 +89,8 @@ live2d:
     show: true # 手机中是否展示
     scale: 0.5  # 移动设备上的缩放
   react:
-      opacityDefault: 0.7
-      opacityOnHover: 0.2
+    opacityDefault: 0.7
+    opacityOnHover: 0.2
 
 # Category & Tag
 default_category: uncategorized
