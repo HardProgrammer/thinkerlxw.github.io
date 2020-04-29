@@ -77,7 +77,6 @@
         text-decoration: none;
         transition: .3s;
         margin: 0 6px;
-        z-index: 1;
         font-weight: 500;
         position: relative;
     }
@@ -100,7 +99,7 @@
     }
     
     .nav-item:not(.is-active):hover {
-        color: #333;
+        color: rgb(44, 31, 226);
     }
     
     .nav-indicator {
@@ -135,7 +134,6 @@
         position: absolute;
         width: 20%;
         top: 210px;
-        z-index: 10;
         background-size: 100% 100%;
         margin-left: 72%;
     }
@@ -154,21 +152,6 @@
         right: 10px;
         width: 110px;
         z-index: 999;
-    }
-    
-    .back-to .back-top {
-        background: url("/thinkerlxw/images/ayer.png") no-repeat scroll 0 0 transparent;
-        display: block;
-        float: right;
-        height: 50px;
-        margin-left: 10px;
-        outline: 0 none;
-        text-indent: -9999em;
-        width: 50px;
-    }
-    
-    .back-to .back-top:hover {
-        background-position: -50px 0
     }
     
     .index {

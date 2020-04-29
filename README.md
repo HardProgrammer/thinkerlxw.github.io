@@ -26,13 +26,18 @@ hexo-helper-live2d 二次元看板娘
 ### 创建新页面
 $ hexo new "My New Post"
 
-### 生成
+### 生成相关静态页面
 $ hexo generate
 
-### 执行
+### 执行启动本地服务
 $ hexo server
 执行成功后输入 localhost:4000 就可以打开网站
 
 ### 上传
 $ hexo deploy
+
+### gitee部署
+代码上传成功后，需要在gitee上使用Gitee Pages服务进行部署，如果是部署在github上可以直接访问页面查看效果。
+
+备注：使用gitee访问速度会比较快。
 

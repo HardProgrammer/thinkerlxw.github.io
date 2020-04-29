@@ -12,6 +12,7 @@
     "version": "4.2.0"
   },
   "dependencies": {
+    "element-ui": "^2.13.1",
     "gitalk": "^1.6.2",
     "hexo": "^4.2.0",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
@@ -50,6 +51,7 @@
     "live2d-widget-model-unitychan": "^1.0.5",
     "live2d-widget-model-wanko": "^1.0.5",
     "live2d-widget-model-z16": "^1.0.5",
-    "save": "^2.4.0"
+    "save": "^2.4.0",
+    "vue": "^2.6.11"
   }
 }

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博思thinker</title>
     <link rel="stylesheet" href="./thinker.css">
+    <link rel="stylesheet" href="/thinkerlxw/dist/main.css">
+
     <link rel="shortcut icon" href="/thinkerlxw/favicon.ico" />
     <script src="/thinkerlxw/js/jquery-2.0.3.min.js"></script>
 </head>
@@ -29,8 +31,7 @@
                 <a href="#" class="nav-item is-active" active-color="orange">网站首页</a>
                 <a href="#" class="nav-item" active-color="green">技术文章</a>
                 <a href="#" class="nav-item" active-color="blue">作品欣赏</a>
-                <a href="#" class="nav-item" active-color="red">产品中心</a>
-                <a href="#" class="nav-item" active-color="rebeccapurple">联系我们</a>
+                <a href="#" class="nav-item" active-color="rebeccapurple">关于我们</a>
                 <span class="nav-indicator"></span>
             </nav>
         </div>
@@ -38,7 +39,7 @@
     <!-- 右侧 -->
     <div class="person-right">
         <div class="head-image">
-            <img src="/thinkerlxw/images/background.jpg" alt="博思thinker">
+            <img src="/thinkerlxw/images/cover1.jpg" alt="博思thinker">
         </div>
         <div class="catagroy">
 
@@ -86,16 +87,11 @@
 
 
         </div>
-        <div class="product">
 
-        </div>
         <div class="about">
 
 
         </div>
-    </div>
-    <div style="display:none;" class="back-to" id="toolBackTop">
-        <a title="返回顶部" onclick="window.scrollTo(0,0);return false;" href="#top" class="back-top"></a>
     </div>
     <script src="/thinkerlxw/js/snowy.js"></script>
 
@@ -104,7 +100,6 @@
     const indicator = document.querySelector('.nav-indicator');
     const items = document.querySelectorAll('.nav-item');
     $(".about").hide();
-    $(".product").hide();
     $(".works").hide();
     $(".articles").hide();
 
@@ -129,35 +124,24 @@
                 case 0:
                     $(".index").show();
                     $(".about").hide();
-                    $(".product").hide();
                     $(".works").hide();
                     $(".articles").hide();
                     break;
                 case 1:
                     $(".index").hide();
                     $(".about").hide();
-                    $(".product").hide();
                     $(".works").hide();
                     $(".articles").show();
                     break;
                 case 2:
                     $(".index").hide();
                     $(".about").hide();
-                    $(".product").hide();
                     $(".works").show();
                     $(".articles").hide();
                     break;
                 case 3:
                     $(".index").hide();
-                    $(".about").hide();
-                    $(".product").show();
-                    $(".works").hide();
-                    $(".articles").hide();
-                    break;
-                case 4:
-                    $(".index").hide();
                     $(".about").show();
-                    $(".product").hide();
                     $(".works").hide();
                     $(".articles").hide();
                     break;
