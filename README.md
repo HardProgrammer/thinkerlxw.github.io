@@ -29,6 +29,9 @@ $ hexo new "My New Post"
 ### 生成相关静态页面
 $ hexo generate
 
+### 打包
+$ cnpm install
+
 ### 执行启动本地服务
 $ hexo server
 执行成功后输入 localhost:4000 就可以打开网站
